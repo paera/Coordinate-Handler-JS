@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Coordinate Hanlder</title>
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+ <script type="text/javascript" src="js/CoordinateHandler.js"></script>
+
+ <script type="text/javascript">
+
+
+  var x, y;
+
+  x = 6576658; // coordinate form either PlaceService or ServiceGuideService unit
+  y = 1634296;
+
+
+  var ch = new CoordinateHandler();
+
+
+  var onBodyLoad = function () {
+
+   var pos = ch.gridToGeodetic(x, y); //return a pos object
+
+   console.log(pos, 'pos');
+   console.log(pos.lat, 'latitude');
+   console.log(pos.lon, 'longitude');
+
+  };
+
+
+ </script>
+
+</head>
+<body onload="onBodyLoad()">
+
+<h1>View page source and web browser console for output</h1>
+
+</body>
+</html>
